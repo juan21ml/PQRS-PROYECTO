@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML -->
+<html lang="en"> <!-- Inicio del elemento HTML con atributo de idioma en inglés -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Especificación de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la vista en dispositivos móviles -->
+    <link rel="stylesheet" href="/css/index.css"> <!-- Enlace al archivo CSS externo -->
+    <title>PQRS System</title> <!-- Título de la página -->
+</head>
+
+<body>
+    <section>
+        <h1>Bienvenido al Sistema PQRS</h1> <!-- Título principal de la página -->
+        <% if (nombre) { %> <!-- Condición para verificar si hay un nombre de usuario -->
+            <p class="nombre">Hola, <%= nombre %>!</p> <!-- Mensaje de bienvenida personalizado -->
+            <a href="/submit">Enviar una PQRSSI</a> <!-- Enlace para enviar una PQRSSI -->
+            <a href="/view">Ver PQRSSI</a> <!-- Enlace para ver las PQRSSI -->
+            <a href="/logout">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
+    </section>
+    <% } else { %> <!-- Bloque de código para usuarios no autenticados -->
+        <a href="/login">Iniciar Sesión</a> <!-- Enlace para iniciar sesión -->
+        <a href="/register">Registrarse</a> <!-- Enlace para registrarse -->
+        <% } %> <!-- Fin de la condición -->
+        <footer>
+            <p>&copy; 2024 Santo Tomas Tunja. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+
+</html>
